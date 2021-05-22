@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Shoe Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_button">Create</string>
+    <string name="login_button">Login</string>
+    <string name="email">EMAIL</string>
+    <string name="password">PASSWORD</string>
+    <string name="welcome_text">Welcome to Shoe Store</string>
+    <string name="instructions">Instructions</string>
+    <string name="online_shopping_instructions">Online Shopping Instructions</string>
+    <string name="instructions_text">1- Once you have registered/logged in, you may then enter the online shopping experience under the \"Shop Online\" tab where you will be able to find a variety of shoes. \n
+        2- Select the items you would like to purchase and remember to choose the size, color once you have selected your item. \n
+        3- Once selected, your selected product will be added to your shopping cart which can then be viewed at any time by clicking on the shopping cart icon at the top right of the screen. \n
+        4- Once you add a product to your cart, you can click on the \"View Cart\" link that will display on screen to edit your order. \n
+        5- Once you are happy with your order on the shopping cart page, scroll down to \"Place Order\" button.</string>
+    <string name="shop_online">Shop Online</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="shoe_company">Brand</string>
+    <string name="shoe_size">Size</string>
+    <string name="shoe_description">Description</string>
+    <string name="add_button">Add</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="custom_name">Name</string>
+    <string name="custom_size">Size</string>
+    <string name="custom_description">Description</string>
+    <string name="logout">Logout</string>
+</resources>

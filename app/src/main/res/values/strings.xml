@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Shoe Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_button">Create</string>
+    <string name="login_button">Login</string>
+    <string name="email">EMAIL</string>
+    <string name="password">PASSWORD</string>
+    <string name="welcome_text">Welcome to Shoe Store</string>
+    <string name="instructions">Instructions</string>
+    <string name="online_shopping_instructions">Online Shopping Instructions</string>
+    <string name="instructions_text">1- Once you tap on create/log in button, you will be directed to the welcome screen where you will see an instructions button. \n
+        2- After that there will be a button named \"Shop Online\" ,if you tap it you will be able to find a variety of shoes.\n
+        3- One you tap on the Shop Online button you will be directed to another screen where you will see all the shoes available. \n
+        4- You can scroll through all the shoes available and you can add new shoe by tapping on the button with a plus on it.</string>
+    <string name="shop_online">Shop Online</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="shoe_company">Brand</string>
+    <string name="shoe_size">Size</string>
+    <string name="shoe_description">Description</string>
+    <string name="add_button">Add</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="custom_name">Name</string>
+    <string name="custom_size">Size</string>
+    <string name="custom_description">Description</string>
+    <string name="logout">Logout</string>
+</resources>

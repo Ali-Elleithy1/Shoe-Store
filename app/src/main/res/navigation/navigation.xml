@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.shoestore.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_WOnBoardingFragment"
+            app:destination="@id/WOnBoardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/WOnBoardingFragment"
+        android:name="com.example.shoestore.WOnBoardingFragment"
+        android:label="fragment_w_on_boarding"
+        tools:layout="@layout/fragment_w_on_boarding" >
+        <action
+            android:id="@+id/action_WOnBoardingFragment_to_IOnBoardingFragment"
+            app:destination="@id/IOnBoardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/IOnBoardingFragment"
+        android:name="com.example.shoestore.IOnBoardingFragment"
+        android:label="IOnBoardingFragment" >
+        <action
+            android:id="@+id/action_IOnBoardingFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment"
+            app:popUpTo="@id/loginFragment">
+            <argument
+                android:name="name"
+                android:defaultValue="null" />
+            <argument
+                android:name="size"
+                android:defaultValue="null" />
+            <argument
+                android:name="brand"
+                android:defaultValue="null" />
+            <argument
+                android:name="description"
+                android:defaultValue="null" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListingFragment"
+        android:name="com.example.shoestore.ShoeListingFragment"
+        android:label="ShoeListingFragment" >
+        <action
+            android:id="@+id/action_shoeListingFragment_to_shoeDetailPageFragment"
+            app:destination="@id/shoeDetailPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailPageFragment"
+        android:name="com.example.shoestore.ShoeDetailPageFragment"
+        android:label="ShoeDetailPageFragment" >
+        <action
+            android:id="@+id/action_shoeDetailPageFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment" >
+            <argument
+                android:name="name" />
+        </action>
+    </fragment>
+</navigation>
