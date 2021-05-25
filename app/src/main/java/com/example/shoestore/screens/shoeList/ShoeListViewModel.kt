@@ -12,13 +12,10 @@ class ShoeListViewModel : ViewModel()
   private val _shoe = MutableLiveData<Shoe>()
           val shoe:LiveData<Shoe>
           get() = _shoe
-  val message = MutableLiveData<String>()
 
 
   init {
       reset()
-      message.value=""
-      //_shoe.value = Shoe("",0.0,"","")
   }
 
   private fun reset()
@@ -35,14 +32,6 @@ class ShoeListViewModel : ViewModel()
   fun addNewShoe(newShoe:Shoe)
   {
       _shoe.value = newShoe
-      Log.i("newShoe", "NEW SHOE ADDED!")
-  }
-  fun sendMessage(newMessage:String)
-  {
-      message.value = newMessage
-      Log.i("Message",newMessage)
-      Log.i("Message",message.value.toString())
-      Log.i("newMessage", "NEW MESSAGE ADDED!")
   }
 }
 

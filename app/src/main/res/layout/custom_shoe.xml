@@ -10,13 +10,14 @@
             android:id="@+id/customIV"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_launcher_background" />
 
         <TextView
-            android:id="@+id/customNameTV"
+            android:id="@+id/customNameLabelTV"
             style="@style/Labels"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,7 +28,18 @@
             app:layout_constraintTop_toBottomOf="@+id/customIV" />
 
         <TextView
-            android:id="@+id/customSizeTV"
+            android:id="@+id/customNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/custom_name"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@+id/customNameLabelTV"
+            app:layout_constraintTop_toBottomOf="@+id/customIV" />
+
+        <TextView
+            android:id="@+id/customSizeLabelTV"
             style="@style/Labels"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,7 +50,20 @@
             app:layout_constraintTop_toBottomOf="@+id/customIV" />
 
         <TextView
-            android:id="@+id/customDescriptionTV"
+            android:id="@+id/customSizeTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/custom_size"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/customSizeLabelTV"
+            app:layout_constraintTop_toBottomOf="@+id/customIV" />
+
+        <TextView
+            android:id="@+id/customDescriptionLabelTV"
             style="@style/Labels"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,6 +71,19 @@
             android:layout_marginTop="8dp"
             android:text="@string/custom_description"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customNameLabelTV" />
+
+        <TextView
+            android:id="@+id/customDescriptionTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/custom_description"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/customDescriptionLabelTV"
             app:layout_constraintTop_toBottomOf="@+id/customNameTV" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

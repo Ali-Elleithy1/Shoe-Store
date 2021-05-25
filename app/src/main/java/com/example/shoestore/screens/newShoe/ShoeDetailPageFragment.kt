@@ -24,16 +24,30 @@ class ShoeDetailPageFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val viewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)
+        val viewModel = ViewModelProvider(requireActivity()).get(ShoeListViewModel::class.java)
         // Inflate the layout for this fragment
         val binding:FragmentShoeDetailPageBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_shoe_detail_page,container,false)
         binding.addBTN.setOnClickListener { view ->
-            //Toast.makeText(context, viewModel.shoe.value!!.name,Toast.LENGTH_LONG)
-            viewModel.sendMessage("THE MESSAGE!")
-            viewModel.addNewShoe(Shoe(binding.shoeNameET.text.toString(),binding.sizeET.text.toString().toDouble(),binding.brandET.text.toString(),binding.descriptionET.text.toString()))
-            view.findNavController().navigate(ShoeDetailPageFragmentDirections.actionShoeDetailPageFragmentToShoeListingFragment(""))
+            if(binding.shoeNameET.text.isNotEmpty() && binding.brandET.text.isNotEmpty() && binding.sizeET.text.isNotEmpty() && binding.descriptionET.text.isNotEmpty()) {
+                viewModel.addNewShoe(
+                    Shoe(
+                        binding.shoeNameET.text.toString(),
+                        binding.sizeET.text.toString().toDouble(),
+                        binding.brandET.text.toString(),
+                        binding.descriptionET.text.toString()
+                    )
+                )
+                view.findNavController()
+                    .navigate(ShoeDetailPageFragmentDirections.actionShoeDetailPageFragmentToShoeListingFragment())
+            }
+            else
+            {
+                Toast.makeText(context,"Please fill all the fields.",Toast.LENGTH_LONG).show()
+            }
         }
-
+        binding.cancelBTN.setOnClickListener { view ->
+            view.findNavController().navigate(ShoeDetailPageFragmentDirections.actionShoeDetailPageFragmentToShoeListingFragment())
+        }
         return binding.root
     }
 
