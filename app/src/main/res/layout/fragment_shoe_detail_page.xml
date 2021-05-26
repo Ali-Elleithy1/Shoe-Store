@@ -2,6 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="Shoe"
+            type="com.example.shoestore.models.Shoe" />
+    </data>
 
     <!-- Here I'm using Constraint Layout to make it easier for me to position every view. -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -63,6 +68,7 @@
             android:ems="10"
             android:hint="@string/shoe_name"
             android:inputType="textPersonName"
+            android:text="@{Shoe.name}"
             app:layout_constraintEnd_toStartOf="@+id/guideline9"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/shoeNameTV" />
@@ -75,6 +81,7 @@
             android:ems="10"
             android:hint="@string/shoe_company"
             android:inputType="textPersonName"
+            android:text="@{Shoe.company}"
             app:layout_constraintEnd_toStartOf="@+id/guideline9"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/brandTV" />
@@ -87,6 +94,7 @@
             android:ems="10"
             android:hint="@string/shoe_size"
             android:inputType="number"
+            android:text="@{Double.toString(Shoe.size)}"
             app:layout_constraintEnd_toStartOf="@+id/guideline9"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/sizeTV" />
@@ -101,6 +109,7 @@
             android:gravity="start|top"
             android:hint="@string/shoe_description"
             android:inputType="textMultiLine"
+            android:text="@{Shoe.description}"
             app:layout_constraintBottom_toTopOf="@+id/cancelBTN"
             app:layout_constraintEnd_toStartOf="@+id/guideline9"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
