@@ -68,7 +68,7 @@
             android:ems="10"
             android:hint="@string/shoe_name"
             android:inputType="textPersonName"
-            android:text="@{Shoe.name}"
+            android:text="@={Shoe.name}"
             app:layout_constraintEnd_toStartOf="@+id/guideline9"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/shoeNameTV" />
@@ -81,7 +81,7 @@
             android:ems="10"
             android:hint="@string/shoe_company"
             android:inputType="textPersonName"
-            android:text="@{Shoe.company}"
+            android:text="@={Shoe.company}"
             app:layout_constraintEnd_toStartOf="@+id/guideline9"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/brandTV" />
@@ -109,7 +109,7 @@
             android:gravity="start|top"
             android:hint="@string/shoe_description"
             android:inputType="textMultiLine"
-            android:text="@{Shoe.description}"
+            android:text="@={Shoe.description}"
             app:layout_constraintBottom_toTopOf="@+id/cancelBTN"
             app:layout_constraintEnd_toStartOf="@+id/guideline9"
             app:layout_constraintStart_toStartOf="@+id/guideline8"

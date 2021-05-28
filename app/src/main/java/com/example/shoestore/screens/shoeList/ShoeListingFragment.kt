@@ -13,6 +13,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
@@ -37,7 +38,8 @@ class ShoeListingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         Log.i("CreateView","Creating View!")
-        viewModel = ViewModelProvider(requireActivity()).get(ShoeListViewModel::class.java)
+        val viewModel: ShoeListViewModel by activityViewModels()
+        //viewModel = ViewModelProvider(requireActivity()).get(ShoeListViewModel::class.java)
 
         // Inflate the layout for this fragment
         val binding:FragmentShoeListingBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_shoe_listing,container,false)

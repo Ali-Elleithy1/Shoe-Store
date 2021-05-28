@@ -7,16 +7,16 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.shoestore.LoginFragment"
-        android:label="LoginFragment" >
+        android:label="Login Screen">
         <action
             android:id="@+id/action_loginFragment_to_WOnBoardingFragment"
-            app:destination="@id/WOnBoardingFragment" />
+            app:destination="@id/WOnBoardingFragment"/>
     </fragment>
     <fragment
         android:id="@+id/WOnBoardingFragment"
         android:name="com.example.shoestore.WOnBoardingFragment"
-        android:label="fragment_w_on_boarding"
-        tools:layout="@layout/fragment_w_on_boarding" >
+        android:label="Welcome Screen"
+        tools:layout="@layout/fragment_w_on_boarding">
         <action
             android:id="@+id/action_WOnBoardingFragment_to_IOnBoardingFragment"
             app:destination="@id/IOnBoardingFragment" />
@@ -24,29 +24,17 @@
     <fragment
         android:id="@+id/IOnBoardingFragment"
         android:name="com.example.shoestore.IOnBoardingFragment"
-        android:label="IOnBoardingFragment" >
+        android:label="Instructions Screen">
         <action
             android:id="@+id/action_IOnBoardingFragment_to_shoeListingFragment"
             app:destination="@id/shoeListingFragment"
             app:popUpTo="@id/loginFragment">
-            <argument
-                android:name="name"
-                android:defaultValue="null" />
-            <argument
-                android:name="size"
-                android:defaultValue="null" />
-            <argument
-                android:name="brand"
-                android:defaultValue="null" />
-            <argument
-                android:name="description"
-                android:defaultValue="null" />
         </action>
     </fragment>
     <fragment
         android:id="@+id/shoeListingFragment"
         android:name="com.example.shoestore.ShoeListingFragment"
-        android:label="ShoeListingFragment" >
+        android:label="Shoe Listing">
         <action
             android:id="@+id/action_shoeListingFragment_to_shoeDetailPageFragment"
             app:destination="@id/shoeDetailPageFragment" />
@@ -54,9 +42,11 @@
     <fragment
         android:id="@+id/shoeDetailPageFragment"
         android:name="com.example.shoestore.ShoeDetailPageFragment"
-        android:label="ShoeDetailPageFragment" >
+        android:label="Shoe Details">
         <action
             android:id="@+id/action_shoeDetailPageFragment_to_shoeListingFragment"
-            app:destination="@id/shoeListingFragment" />
+            app:destination="@id/shoeListingFragment"
+            app:popUpTo="@id/shoeListingFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
