@@ -55,9 +55,3 @@ class ShoeDetailPageFragment : Fragment() {
     }
 
 }
-/*Shoe(
-binding.shoeNameET.text.toString(),
-binding.sizeET.text.toString().toDouble(),
-binding.brandET.text.toString(),
-binding.descriptionET.text.toString()
-)*/
