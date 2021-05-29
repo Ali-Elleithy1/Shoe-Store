@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.databinding.InverseMethod
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
@@ -34,12 +36,11 @@ class ShoeDetailPageFragment : Fragment() {
         binding.shoe = shoe
         binding.addBTN.setOnClickListener { view ->
             if(binding.shoeNameET.text.isNotEmpty() && binding.brandET.text.isNotEmpty() && binding.sizeET.text.isNotEmpty() && binding.descriptionET.text.isNotEmpty()) {
-                binding.shoe?.name = binding.shoeNameET.text.toString()
-                binding.shoe?.size = binding.sizeET.text.toString().toDouble()
-                binding.shoe?.company = binding.brandET.text.toString()
-                binding.shoe?.description = binding.descriptionET.text.toString()
                 viewModel.addNewShoe(
-                    shoe
+                    Shoe(binding.shoeNameET.text.toString(),
+                        binding.sizeET.text.toString().toDouble(),
+                        binding.brandET.text.toString(),
+                        binding.descriptionET.text.toString())
                 )
                 findNavController().navigateUp()
             }
@@ -53,5 +54,4 @@ class ShoeDetailPageFragment : Fragment() {
         }
         return binding.root
     }
-
 }

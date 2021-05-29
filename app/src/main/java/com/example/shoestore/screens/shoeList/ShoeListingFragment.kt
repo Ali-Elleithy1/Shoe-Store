@@ -37,7 +37,6 @@ class ShoeListingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.i("CreateView","Creating View!")
         val viewModel: ShoeListViewModel by activityViewModels()
         //viewModel = ViewModelProvider(requireActivity()).get(ShoeListViewModel::class.java)
 

@@ -1,6 +1,8 @@
 package com.example.shoestore.screens.shoeList
 
 import android.util.Log
+import android.widget.EditText
+import androidx.databinding.InverseMethod
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -34,4 +36,5 @@ class ShoeListViewModel : ViewModel()
       _shoe.value = newShoe
   }
 }
+
 

@@ -15,8 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         DataBindingUtil.setContentView<ActivityMainBinding>(this,R.layout.activity_main)
         val navController = this.findNavController(R.id.myNavHost)
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.loginFragment,R.id.WOnBoardingFragment))
-        NavigationUI.setupActionBarWithNavController(this,navController,appBarConfiguration)
+        //val appBarConfiguration = AppBarConfiguration(setOf(R.id.loginFragment,R.id.WOnBoardingFragment))
+        NavigationUI.setupActionBarWithNavController(this,navController)
 
     }
 
