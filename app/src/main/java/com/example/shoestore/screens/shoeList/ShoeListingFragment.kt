@@ -27,7 +27,7 @@ import com.squareup.picasso.Picasso
 
 
 class ShoeListingFragment : Fragment() {
-    private lateinit var viewModel:ShoeListViewModel
+    private val viewModel:ShoeListViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

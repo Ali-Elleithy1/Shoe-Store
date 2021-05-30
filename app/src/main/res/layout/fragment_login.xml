@@ -2,6 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="user"
+            type="com.example.shoestore.models.User" />
+    </data>
 
     <!-- Here I'm using Constraint Layout to make it easier for me to position every view. -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -32,6 +37,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textEmailAddress"
+            android:text="@={user.email}"
             app:layout_constraintEnd_toStartOf="@+id/guideline3"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toTopOf="@+id/guideline5" />
@@ -43,6 +49,7 @@
             android:layout_marginTop="50dp"
             android:ems="10"
             android:inputType="textPassword"
+            android:text="@={user.password}"
             app:layout_constraintEnd_toStartOf="@+id/guideline3"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
