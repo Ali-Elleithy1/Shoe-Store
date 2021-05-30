@@ -37,10 +37,7 @@ class ShoeDetailPageFragment : Fragment() {
         binding.addBTN.setOnClickListener { view ->
             if(binding.shoeNameET.text.isNotEmpty() && binding.brandET.text.isNotEmpty() && binding.sizeET.text.isNotEmpty() && binding.descriptionET.text.isNotEmpty()) {
                 viewModel.addNewShoe(
-                    Shoe(binding.shoeNameET.text.toString(),
-                        binding.sizeET.text.toString().toDouble(),
-                        binding.brandET.text.toString(),
-                        binding.descriptionET.text.toString())
+                    shoe
                 )
                 findNavController().navigateUp()
             }
